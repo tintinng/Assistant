@@ -1,5 +1,5 @@
 <template>
-  <a-layout id="components-layout-demo-top-side">
+  <a-layout id="layout-main">
     <!-- 头部导航 -->
     <a-layout-header class="header">
       <div class="logo" />
@@ -28,14 +28,19 @@
       <router-view></router-view>
     </a-layout-content>
     <!-- 底部区域 -->
-    <a-layout-footer class="footer">
-      Ant Design ©2018 Created by Ant UED
+    <a-layout-footer style="background: #001529;color: #ffffff;">
+      Assistant Site ©2020 Created by Tintin
     </a-layout-footer>
   </a-layout>
 </template>
 
 <style>
-#components-layout-demo-top-side .logo {
+#layout-main{
+  background: #183952;
+  height: 100vh;
+  width: 100vw;
+}
+#layout-main .logo {
   width: 120px;
   height: 31px;
   background: rgba(255, 255, 255, 0.2);
@@ -44,18 +49,13 @@
 }
 
 .header {
-  background: #ffffff;
   text-align: left;
 }
 
 .main-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-  width: 95vw;
-  margin: 1% auto;
-  background: lightblue;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .footer {
