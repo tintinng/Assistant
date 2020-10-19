@@ -6,19 +6,19 @@
       <a-menu
         theme="dark"
         mode="horizontal"
-        :default-selected-keys="['1']"
+        :default-selected-keys="[`${this.activeMenu}`]"
         :style="{ lineHeight: '64px' }"
       >
-        <a-menu-item key="1">
-          <router-link to="/">Home</router-link>
+        <a-menu-item key="/home">
+          <router-link to="/home">Home</router-link>
         </a-menu-item>
-        <a-menu-item key="2">
+        <a-menu-item key="/todo">
           <router-link to="/todo">Todo</router-link>
         </a-menu-item>
-        <a-menu-item key="3">
+        <a-menu-item key="/sites">
           <router-link to="/sites">Sites</router-link>
         </a-menu-item>
-        <a-menu-item key="4">
+        <a-menu-item key="/about">
           <router-link to="/about">About</router-link>
         </a-menu-item>
       </a-menu>
@@ -34,9 +34,21 @@
   </a-layout>
 </template>
 
+<script>
+export default {
+  computed: {
+    activeMenu () {
+      const route = this.$route
+      const { path, meta } = route
+      return meta.activeMenu ? meta.activeMenu : path
+    }
+  }
+}
+</script>
+
 <style>
 #layout-main{
-  background: #183952;
+  background: #ffffff;
   height: 100vh;
   width: 100vw;
 }

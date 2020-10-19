@@ -1,15 +1,15 @@
 <!--  -->
 <template>
   <div id="layout-home">
-    <a-layout style="background: #183952;">
+    <a-layout style="background: #ffffff;">
       <a-layout-sider width='40vw'>
         <clock></clock>
       </a-layout-sider>
-      <!-- <a-layout class="home-main">
-        <a-layout-header>Header</a-layout-header>
+      <a-layout class="home-main">
+        <!-- <a-layout-header>Header</a-layout-header>
         <a-layout-content></a-layout-content>
-        <a-layout-footer>Footer</a-layout-footer>
-      </a-layout> -->
+        <a-layout-footer>Footer</a-layout-footer> -->
+      </a-layout>
     </a-layout>
   </div>
 </template>
@@ -37,7 +37,7 @@ export default {
   background:  #7dbcea;
 }
 #layout-home .ant-layout-sider {
-  background:  #183952;
+  background:  #ffffff;
   color: #fff;
   height: 100%;
   display: flex;
@@ -47,6 +47,7 @@ export default {
 }
 #layout-home .home-main {
   width: 60vw;
+  background: inherit;
   /* border-radius: 5%; */
   /* margin: 1%; */
 }

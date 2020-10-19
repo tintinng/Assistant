@@ -48,19 +48,6 @@ export default {
 </script>
 
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #091921;
-}
-
 .clock {
   width: 350px;
   height: 350px;
@@ -69,7 +56,7 @@ body {
   align-items: center;
   background: url("../../../assets/home/clock.png");
   background-size: cover;
-  border: 4px solid #091921;
+  border: 4px solid #a4b0be;
   border-radius: 50%;
   box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
     inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3),
@@ -80,7 +67,7 @@ body {
   position: absolute;
   width: 15px;
   height: 15px;
-  background: #ffffff;
+  background: #000000;
   border-radius: 50%;
   z-index: 10000;
 }
@@ -91,8 +78,8 @@ body {
 }
 .clock .hour,
 .hr {
-  width: 160px;
-  height: 160px;
+  width: 130px;
+  height: 130px;
 }
 .clock .min,
 .mn {
@@ -117,8 +104,8 @@ body {
   content: "";
   position: absolute;
   width: 8px;
-  height: 80px;
-  background: #ff105e;
+  height: 70px;
+  background: #1e90ff;
   z-index: 10;
   border-radius: 6px 6px 0 0;
 }
@@ -127,7 +114,7 @@ body {
   position: absolute;
   width: 4px;
   height: 90px;
-  background: #ffffff;
+  background: #ffa502;
   z-index: 11;
   border-radius: 6px 6px 0 0;
 }
@@ -136,7 +123,7 @@ body {
   position: absolute;
   width: 2px;
   height: 150px;
-  background: #ffffff;
+  background: #ff6b81;
   z-index: 12;
   border-radius: 6px 6px 0 0;
 }

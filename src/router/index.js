@@ -10,7 +10,6 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
     component: Home
   },
   {
@@ -20,8 +19,23 @@ const routes = [
   },
   {
     path: '/todo',
+    redirect: '/todo/todoList',
     name: 'Todo',
-    component: Todo
+    component: Todo,
+    children: [
+      {
+        path: 'todoList',
+        name: 'TodoList',
+        component: () => import('../views/todo/todoList/todoList'),
+        meta: { activeMenu: '/todo' }
+      },
+      {
+        path: 'learningSchedule',
+        name: 'LearningSchedule',
+        component: () => import('../views/todo/learningSchedule/learningSchedule'),
+        meta: { activeMenu: '/todo' }
+      }
+    ]
   },
   {
     path: '/sites',
