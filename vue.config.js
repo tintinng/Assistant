@@ -1,5 +1,5 @@
 module.exports = {
   outputDir: 'dist',
-  publicPath: '/Assistant/',
+  publicPath: '/assistant/',
   assetsDir: 'static'
 }
