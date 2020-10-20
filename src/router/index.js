@@ -10,6 +10,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
+    redirect: '/home',
     component: Home
   },
   {
@@ -40,7 +41,22 @@ const routes = [
   {
     path: '/sites',
     name: 'Sites',
-    component: Sites
+    redirect: '/sites/resourceAndDocs',
+    component: Sites,
+    children: [
+      {
+        path: 'resourceAndDocs',
+        name: 'ResourceAndDocs',
+        component: () => import('../views/sites/resourceAndDocs/index'),
+        meta: { activeMenu: '/sites' }
+      },
+      {
+        path: 'devCommunity',
+        name: 'DevCommunity',
+        component: () => import('../views/sites/devCommunity/index'),
+        meta: { activeMenu: '/sites' }
+      }
+    ]
   },
   {
     path: '/about',

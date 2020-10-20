@@ -83,7 +83,7 @@ main {
     width: 100%;
     /* max-width: 400px; */
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
-    border-radius: 24px;
+    /* border-radius: 24px; */
     padding: 48px 28px;
     background-color: rgb(245, 246, 252);
 }
