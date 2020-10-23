@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import indexLayout from './views/index'
+import indexLayout from '@/views/indexLayout'
 export default {
   components: {
     indexLayout

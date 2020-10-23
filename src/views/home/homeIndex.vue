@@ -2,13 +2,11 @@
 <template>
   <div id="layout-home">
     <a-layout style="background: #ffffff;">
-      <a-layout-sider width='40vw'>
+      <a-layout-sider width='30vw'>
         <clock></clock>
       </a-layout-sider>
       <a-layout class="home-main">
-        <!-- <a-layout-header>Header</a-layout-header>
-        <a-layout-content></a-layout-content>
-        <a-layout-footer>Footer</a-layout-footer> -->
+        <carousel></carousel>
       </a-layout>
     </a-layout>
   </div>
@@ -16,9 +14,11 @@
 
 <script>
 import Clock from './clock/clock'
+import Carousel from './carousel/carousel'
 export default {
   components: {
-    Clock
+    Clock,
+    Carousel
   }
 }
 
@@ -43,16 +43,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2% 0;
-}
-#layout-home .home-main {
-  width: 60vw;
-  background: inherit;
-  /* border-radius: 5%; */
-  /* margin: 1%; */
-}
-#layout-home .ant-layout-content {
-  background: rgba(16, 142, 233, 1);
-  color: #fff;
+  padding: 4% 0;
 }
 </style>

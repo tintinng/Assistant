@@ -1,12 +1,12 @@
 <template>
   <a-layout id="layout-main">
     <!-- 头部导航 -->
-    <a-layout-header class="header">
+    <a-layout-header v-if="spPathes.indexOf(activeMenu) == -1" class="header">
       <div class="logo" />
       <a-menu
         theme="dark"
         mode="horizontal"
-        :default-selected-keys="[`${this.activeMenu}`]"
+        :selected-keys="[`${this.activeMenu}`]"
         :style="{ lineHeight: '64px' }"
       >
         <a-menu-item key="/home">
@@ -24,18 +24,28 @@
       </a-menu>
     </a-layout-header>
     <!-- 主题内容区 -->
-    <a-layout-content class="main-content">
+    <!-- <a-layout-content class="main-content"> -->
       <router-view></router-view>
-    </a-layout-content>
+    <!-- </a-layout-content> -->
     <!-- 底部区域 -->
-    <a-layout-footer style="background: #001529;color: #ffffff;">
+    <a-layout-footer v-if="spPathes.indexOf(activeMenu) == -1" style="background: #001529;color: #ffffff;">
       Assistant Site ©2020 Created by Tintin
     </a-layout-footer>
   </a-layout>
 </template>
 
 <script>
+const spPathes = [
+  '/404',
+  '/login'
+]
 export default {
+  data: function () {
+    return {
+      // 特殊页面v-if判断不展示导航栏和底部
+      spPathes
+    }
+  },
   computed: {
     activeMenu () {
       const route = this.$route
@@ -64,11 +74,10 @@ export default {
   text-align: left;
 }
 
-.main-content {
+/* .main-content {
   height: 100%;
   width: 100%;
-  margin: 0 auto;
-}
+} */
 
 .footer {
   text-align: center;
